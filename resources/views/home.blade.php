@@ -1,23 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+<h1>Crear Nueva Tarea</h1>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+<form action="{{ route('tasks.store') }}" method="POST">
+    @csrf
+    <label for="title">Título</label>
+    <input type="text" name="title" id="title" required>
 
-                    {{ __('¡Estás conectado!') }}
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+    <label for="due_date">Fecha Límite</label>
+    <input type="date" name="due_date" id="due_date" required>
+
+    <button type="submit">Crear</button>
+</form>
+
 @endsection

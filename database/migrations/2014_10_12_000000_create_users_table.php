@@ -22,18 +22,17 @@ return new class extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
+    
         Schema::create('tasks', function (Blueprint $table) {
-            $table->id();  // Llave primaria autoincrementable
-            $table->foreignId('user_id')->constrained('users');  // Llave foránea de la tabla users
-            $table->string('title');  // Título de la tarea
-            $table->text('description');  // Descripción de la tarea
-            $table->string('status');  // Estado de la tarea: pendiente, en progreso, completada
-            $table->date('due_date');  // Fecha límite de la tarea
-            $table->timestamps();  // Campos created_at y updated_at
+            $table->id();
+            $table->foreignId('user_id')->constrained('users');
+            $table->string('title');
+            $table->text('description')->nullable();
+            $table->string('status'); // pendiente, en progreso, completada
+            $table->date('due_date');
+            $table->timestamps();
         });
     }
-
-
 
     /**
      * Reverse the migrations.
