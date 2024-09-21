@@ -1,10 +1,10 @@
 # Gestión de Tareas con Laravel
 
 ## Descripción
-Esta es una aplicación web básica de gestión de tareas desarrollada en Laravel.
+instrucciones para ver la prueba de Laravel
 
 ## Requisitos
-- PHP >= 7.3
+- PHP >= 8.0
 - Composer
 - MySQL
 
