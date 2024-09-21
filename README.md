@@ -1,4 +1,5 @@
-# Gestión de Tareas con Laravel
+# Instrucciones para ver la prueba de Laravel
+
 
 ## Descripción
 instrucciones para ver la prueba de Laravel
